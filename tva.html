@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculatrice TVA</title>
+</head>
+<body>
+    <div class="calculator">
+        <label for="montant">Montant :</label>
+        <input type="number" id="montant">
+        
+        <div>
+            <label for="type">Type :</label>
+            <input type="radio" id="tva_ht" name="type" value="HT" checked>
+            <label for="tva_ht">HT</label>
+            <input type="radio" id="tva_ttc" name="type" value="TTC">
+            <label for="tva_ttc">TTC</label>
+        </div>
+
+        <div>
+            <label for="taux">Taux de TVA :</label>
+            <select id="taux">
+                <option value="20">20%</option>
+                <option value="10">10%</option>
+                <option value="5.5">5.5%</option>
+            </select>
+        </div>
+
+        <button onclick="calculateTVA()">Calculer</button>
+
+        <p id="resultat"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
